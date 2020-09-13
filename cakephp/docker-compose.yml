@@ -11,7 +11,7 @@ services:
         environment: 
             - APP_DEFAULT_LOCALE=ja_JP
             - APP_DEFAULT_TIMEZONE=Asia/Tokyo
-            - DATABASE_HOST=cakephp-web-db
+            - DATABASE_HOST=cakephp-db
             - DATABASE_USER=root
             - DATABASE_PASS=root
             - DATABASE_NAME=qa_app
