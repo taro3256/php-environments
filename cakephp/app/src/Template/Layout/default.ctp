@@ -32,6 +32,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <!-- Bootstrap の CSS -->
+    <?= $this->Html->css('bootstrap.min.css') ?>
+    <!-- jQuery -->
+    <?= $this->Html->script('jquery-3.3.1.min.js') ?>
+    <!-- Bootstrap の JS -->
+    <?= $this->Html->script('bootstrap.min.js') ?>
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
