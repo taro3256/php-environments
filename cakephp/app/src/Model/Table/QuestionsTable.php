@@ -19,4 +19,21 @@ class QuestionsTable extends Table {
             'fireignKey' => 'question_id'
         ]);
     }
+
+    /**
+     * 回答付きの質問一覧を取得する
+     *
+     * @return \Cake\ORM\Query 回答付きの質問一覧クエリ
+     */
+    public function findQuestionsWithAnsweredCount()
+    {
+        $query = $this->find();
+        $query
+            ->select(['answered_count' => $query->func()->count('Answers.id')])
+            ->leftJoinWith('Answers')
+            ->group(['Questions.id'])
+            ->enableAutoFields(true);
+
+        return $query;
+    }
 }
